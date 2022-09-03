@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<table class="table table-bordered border-primary">
+		<!--Cabecera de mi tabla-->
+		<thead>
+			<tr>
+				<th>CEDULA</th>
+				<th>NOMBRE</th>
+				<th>APELLIDO</th>
+				<th>GENERO</th>
+			</tr>
+		</thead>
+		<!--Cuerpo de mi tabla-->
+		<tbody>
+			<h1> Mi pagina principal</h1>
+			<tr th:each="persona : ${personas}">
+				<td th:text="${persona.cedula}"></td>
+				<td th:text="${persona.nombre}"></td>
+				<td th:text="${persona.apellido}"></td>
+				<td th:text="${persona.genero}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
